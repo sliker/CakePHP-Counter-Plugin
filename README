@@ -1,0 +1,65 @@
+﻿The Count Plugin provides count functions for CakePHP.
+
+/*
+ * Count Plugin for CakePHP
+ * 
+ * PHP version 5
+ *
+ * @copyright Copyright 2010, Cake. (http://trpgtools-onweb.sourceforge.jp/)
+ * @category README
+ * @package  Count Plugin
+ * @version  0.1
+ * @author   Cake <cake_67@users.sourceforge.jp>
+ * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
+ * @link     https://github.com/Cake/CakePHP-Counter-Plugin
+ */
+
+## Requirements ##
+
+* PHP version: PHP 5.2+
+* CakePHP version: 1.3 Stable+
+
+#Functions
++Behavior
+ -Countup
+   - saveCount([$foreign_key])
+     save a count.
+     $foreign_key : The unique id of model.
+
+   -getTotalCount([$foreign_key], [$conditions])
+     get total counts by he model (and the foreign_key).
+     $foreign_key : The unique id of model.
+     $conditions : Optional conditions to get total counts. The format is same as $model->find().
+
+
+----
+#Installation
+
+Create table by schema.
+
+====
+
+cake schema create counts -plugin count( -dry)
+
+====
+
+Add Countup Behavoir at the model.
+
+====
+
+var $actsAs = array(
+	'Count.CountUp',
+);
+
+====
+
+Call saveCount() to count up.
+
+====
+
+(Example: At controllers)
+
+$this->[Modelname]->saveCount($id);
+
+====
+
