@@ -19,18 +19,27 @@
 * PHP version: PHP 5.2+
 * CakePHP version: 1.3 Stable+
 
-#Functions
+
+## Functions ##
 +Behavior
  -Countup
    - saveCount([$foreign_key])
      save a count.
      $foreign_key : The unique id of model.
 
-   -getTotalCount([$foreign_key], [$conditions])
+   -getTotalCount([$foreign_key, $conditions])
      get total counts by he model (and the foreign_key).
      $foreign_key : The unique id of model.
      $conditions : Optional conditions to get total counts. The format is same as $model->find().
 
++Helper
+ -Count
+   - totalCount($data[, $options])
+     Output total count.
+     $data : data type array('Count' => array(...)).
+     $options : array type.
+                $options['tag'] sets the type of tag. Default is span.
+                other parameters are the HTML attributes(id, class and so on).
 
 ----
 #Installation
@@ -63,3 +72,24 @@ $this->[Modelname]->saveCount($id);
 
 ====
 
+The total count can be displayed by the Count helper.
+
+====
+
+
+(Example: At controllers)
+
+var $helpers = array(
+	'Html',
+	'Count.Count',
+);
+
+(At view)
+
+echo $count->totalCount($link, array(
+        'tag' => 'div',
+        'id' => 'total_count',
+        'class' => 'link',
+));
+
+====
