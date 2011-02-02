@@ -1,4 +1,4 @@
-﻿The Count Plugin provides count functions for CakePHP.
+The Count Plugin provides count functions for CakePHP.
 
 /*
  * Count Plugin for CakePHP
@@ -41,7 +41,7 @@
                 $options['tag'] sets the type of tag. Default is span.
                 other parameters are the HTML attributes(id, class and so on).
 
-----
+
 #Installation
 
 Create table by schema.
@@ -93,3 +93,4 @@ echo $count->totalCount($link, array(
 ));
 
 ====
+
