@@ -1,7 +1,7 @@
 The Count Plugin provides count functions for CakePHP.
 
 /*
- * Count Plugin for CakePHP
+ * Count Plugin for CakePHP 2
  * 
  * PHP version 5
  *
@@ -10,6 +10,7 @@ The Count Plugin provides count functions for CakePHP.
  * @package  Count Plugin
  * @version  0.1
  * @author   Cake <cake_67@users.sourceforge.jp>
+ * @update   David <david@davidvu.co>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     https://github.com/Cake/CakePHP-Counter-Plugin
  */
@@ -17,7 +18,7 @@ The Count Plugin provides count functions for CakePHP.
 ## Requirements ##
 
 * PHP version: PHP 5.2+
-* CakePHP version: 1.3 Stable+
+* CakePHP version: 2.x
 
 
 ## Functions ##
