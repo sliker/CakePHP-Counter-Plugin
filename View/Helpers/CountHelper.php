@@ -12,10 +12,12 @@
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     https://github.com/Cake/CakePHP-Counter-Plugin
  */
-class CountHelper extends Helper {
+
+App::uses('AppHelper', 'View/Helper');
+class CountHelper extends AppHelper {
 	public $helpers = array('Html');
 
-	function totalCount($data, $options = array()) {
+	public function totalCount($data, $options = array()) {
 
 		$total_count = 0;
 		if (isset($data['Count'][0]['Count'][0]['total_count']) && (is_string($data['Count'][0]['Count'][0]['total_count']) || is_int($data['Count'][0]['Count'][0]['total_count']))) {
